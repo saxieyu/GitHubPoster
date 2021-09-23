@@ -65,11 +65,7 @@ jobs:
       - name: Run sync duolingo script
         if: contains(env.TYPE, 'duolingo')
         run: |
-<<<<<<< HEAD
-          python cli.py duolingo --user_name ${{ secrets.DUOLINGO_USER_NAME }} --me ${{ env.ME }} --year 2019-2021
-=======
-          python -m github_poster duolingo --duolingo_user_name ${{ secrets.DUOLINGO_USER_NAME }} --me ${{ env.ME }}
->>>>>>> 05b3e65c21354c1032c466336edb5dbf102c395b
+          python -m github_poster duolingo --duolingo_user_name ${{ secrets.DUOLINGO_USER_NAME }} --me ${{ env.ME }} --year 2019-2021
 
       - name: Run sync cichang script
         if: contains(env.TYPE, 'cichang')
